@@ -1,0 +1,21 @@
+<!-- breadcrumb -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 border mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#" class="text-secondary">{{root}}</a>
+                    </li>
+                    <li class="breadcrumb-item" *ngFor="let child of child">
+                        <a routerLink='{{child.link}}' routerLinkActive="active" class="text-secondary">{{child.title}}</a>
+                    </li>
+                </ol>
+            </nav>
+            
+        </div>
+        <div class="row col mt-3">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
