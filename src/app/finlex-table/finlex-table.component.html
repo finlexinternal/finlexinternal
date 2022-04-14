@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Deductible</th>
+                    <th scope="col"> Created_at</th>
+                    <th scope="col">Insurance Sum</th>
+                    <th scope="col">Approval Required</th>
+                    <th scope="col">is_preliminary_allowed</th>
+                    <th scope="col">no_offer</th>
+                    <th scope="col">premium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of tableList">
+                    <th scope="row">{{data.id}}</th>
+                    <td>{{data.deductible}}</td>
+                    <td>{{data.created_at}}</td>
+                    <td>{{data.insurance_sum}}</td>
+                    <td>{{data.is_approval_required}}</td>
+                    <td>{{data.is_preliminary_allowed}}</td>
+                    <td>{{data.no_offer}}</td>
+                    <td>{{data.premium}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

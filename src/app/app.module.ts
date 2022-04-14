@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FinlexTableComponent } from './finlex-table/finlex-table.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AboutComponent,
     ContactComponent,
     DashboardComponent,
+    FinlexTableComponent,
     
   ],
   imports: [
