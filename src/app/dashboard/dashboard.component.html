@@ -1,2 +1,10 @@
 <finlex-breadcrumb [root]="parent" [child]="child"></finlex-breadcrumb>
-<finlex-table></finlex-table>
+<finlex-table (onRowClickEvent)="RowClickEvent($event)"></finlex-table>
+<div class="container">
+    <div class="row">
+        <div class="col-12" *ngIf="rowData">
+            <h3>Row Data</h3>
+            <p>Clicked row data is: {{ rowData | json }}</p>
+        </div>
+    </div>
+</div>

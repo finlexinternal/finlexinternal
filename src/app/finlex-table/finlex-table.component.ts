@@ -1,5 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Table } from '../table.interface';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { TableAdapter } from '../table.interface';
+enum Types {
+  Number,
+  String,
+  Date,
+  Currency,
+  Icon,
+}
 
 @Component({
   selector: 'finlex-table',
@@ -7,31 +14,40 @@ import { Table } from '../table.interface';
   styleUrls: ['./finlex-table.component.scss']
 })
 export class FinlexTableComponent implements OnInit {
-  @Input() tableList: Table[] = [
+  @Input() tableAdapter: TableAdapter[] = [
+    {
+      columnTitle: 'Id',
+      field: 'id',
+      type: 'number'
+    },
+    {
+      columnTitle: 'Deductible',
+      field: 'deductible',
+      type: 'number'
+    }
+  ];  
+  @Input() tableFields = [
     {
       id: 1,
       deductible: 100,
       created_at: '2020-01-01',
-      insurance_sum: 100,
-      is_approval_required: true,
-      is_preliminary_allowed: 'yes',
-      no_offer: false,
-      premium: 100
     },
     {
       id: 2,
-      deductible: 101,
-      created_at: '2020-01-02',
-      insurance_sum: 101,
-      is_approval_required: true,
-      is_preliminary_allowed: 'yes',
-      no_offer: false,
-      premium: 101
+      deductible: 200,
+      created_at: '2020-02-02',
     }
   ];
+  @Output() public onRowClickEvent: EventEmitter<any> = new EventEmitter();
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public onRowClick(event: any): void {
+    this.onRowClickEvent.emit(event);
   }
 
 }

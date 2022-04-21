@@ -7,6 +7,7 @@ import { BreadcrumbLinkItem } from '../breadcrumb.interface'
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  public rowData: any;
   public parent: string = 'Test Route';
   public child: BreadcrumbLinkItem[] = [
     {
@@ -25,6 +26,9 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  public RowClickEvent(event: any): void {
+    this.rowData = event;
   }
 
 
