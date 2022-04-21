@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row border">
+        <div class="col-3" *ngFor="let item of dataSource">
+            <div class="form-check my-3 p-5 border">
+                <input class="form-check-input" type="radio" value="{{item.value}}" name="groupName">
+                <ng-container *ngIf="!item.label">
+                    <img src="{{item.piturePath}}" alt="" height="70px" width="140px"  title="{{item.tooltip}}">
+                </ng-container>
+                <ng-container *ngIf="item.label">
+                <label class="form-check-label" for="flexRadioDefault1" title="{{item.tooltip}}">
+                        {{item.label}}
+                </label>
+            </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

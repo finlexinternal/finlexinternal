@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FinlexTableComponent } from './finlex-table/finlex-table.component';
+import { FinlexRadioListComponent } from './finlex-radio-list/finlex-radio-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FinlexTableComponent } from './finlex-table/finlex-table.component';
     ContactComponent,
     DashboardComponent,
     FinlexTableComponent,
+    FinlexRadioListComponent,
     
   ],
   imports: [
