@@ -1,7 +1,6 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mt-3">
-          {{ tableFields | json }}
             <table class="table">
                 <thead>
                   <tr>
@@ -14,7 +13,7 @@
                   <tr *ngFor="let data of tableFields" (click)="onRowClick(data)">
                     <td *ngFor="let head of tableAdapter">
                         <ng-container *ngIf="data">
-                          <!-- {{data[head.field]}} -->
+                          {{data[head.field]}}
                         </ng-container>
                     </td>
                   </tr>
@@ -24,51 +23,3 @@
     </div>
 </div>
 
-<!-- <table mdbTable #tableEl="mdbTable" [striped]="striped" [bordered]="bordered" [hover]="hover" [small]="small">
-  <thead class="table-header">
-    <tr>
-      <th *ngFor="let head of fields" scope="col" class="c-head" [attr.field]="head.field" (click)="sortBy(head)">
-        {{ head.title | titlecase }}
-        <mdb-icon fas icon="sort"></mdb-icon>
-      </th>
-    </tr>
-  </thead>
-  <tbody #tableBody>
-    <tr mdbTableCol *ngFor="let el of data; trackBy: trackByFn; let i = index">
-    
-      
-        <td *ngFor="let head of fields" scope="col">
-          <ng-container *ngIf="isAssociation(head)">
-            <ng-container *ngIf="el[head.associationName]">
-              {{ el[head.associationName][head.associationField] }}
-            </ng-container>
-          </ng-container>
-          <ng-container *ngIf="isDate(head)">
-            {{ el[head.field] | date: head.format }}
-          </ng-container>
-          <ng-container *ngIf="isAction(head)">
-            <finlex-button [type]="head.action.buttonType" (buttonClick)="doAction(head.action.callback, el)">
-              <i *ngIf="head.action.hasIcon" [class]="head.action.cssClassIcon"></i>
-              <span *ngIf="head.action.hasText">{{ head.title }}</span>
-            </finlex-button>
-          </ng-container>
-          <ng-container *ngIf="isTag(head)">
-            <ng-container *ngFor="let tag of head.tags">
-              <finlex-tag *ngIf="tag.value === el[head.field]" [type]="tag.type">{{ el[head.field] }}</finlex-tag>
-            </ng-container>
-          </ng-container>
-          <ng-container *ngIf="isCurrency(head)">
-            {{ el[head.field] | currencyFx: locale }}
-          </ng-container>
-          <ng-container *ngIf="isNumber(head)">
-            {{ el[head.field] | numberSeparator: locale }}
-          </ng-container>
-          <ng-container *ngIf="isString(head) || isLink(head) || isTime(head)">
-            {{ el[head.field] }}
-          </ng-container>
-        </td>
-      </ng-container>
-    </tr>
-    
-  </tbody>
-</table> -->

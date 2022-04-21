@@ -1,12 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { TableAdapter } from '../table.interface';
-enum Types {
-  number,
-  string,
-  Date,
-  currency,
-  icon,
-}
+import { TableField } from '../table.interface';
 
 @Component({
   selector: 'finlex-table',
@@ -19,23 +13,13 @@ export class FinlexTableComponent implements OnInit {
       columnTitle: 'Id',
       field: 'id',
       type: 'number'
-    },
-    {
-      columnTitle: 'Deductible',
-      field: 'deductible',
-      type: 'number'
     }
-  ];  
-  @Input() tableFields = [
+  ];
+  @Input() tableFields: TableField[] = [
     {
       id: 1,
       deductible: 100,
       created_at: '2020-01-01',
-    },
-    {
-      id: 2,
-      deductible: 200,
-      created_at: '2020-02-02',
     }
   ];
   @Output() public onRowClickEvent: EventEmitter<any> = new EventEmitter();
