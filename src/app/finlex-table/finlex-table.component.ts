@@ -1,11 +1,11 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { TableAdapter } from '../table.interface';
 enum Types {
-  Number,
-  String,
+  number,
+  string,
   Date,
-  Currency,
-  Icon,
+  currency,
+  icon,
 }
 
 @Component({
