@@ -12,6 +12,9 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FinlexTableComponent } from './finlex-table/finlex-table.component';
 import { FinlexRadioListComponent } from './finlex-radio-list/finlex-radio-list.component';
+import { FinlexDragdropComponent } from './finlex-dragdrop/finlex-dragdrop.component';
+import { FinlexProgressComponent } from './finlex-progress/finlex-progress.component';
+import { FinlexDndDirective } from './finlex-dnd.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { FinlexRadioListComponent } from './finlex-radio-list/finlex-radio-list.
     DashboardComponent,
     FinlexTableComponent,
     FinlexRadioListComponent,
+    FinlexDragdropComponent,
+    FinlexProgressComponent,
+    FinlexDndDirective,
     
   ],
   imports: [
