@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row border">
-        <div class="col-3" *ngFor="let item of dataSource">
-            <div class="form-check my-3 p-5 border">
-                <input class="form-check-input" type="radio" value="{{item.value}}" name="groupName">
+        <div class="col-3 resize" *ngFor="let item of dataSource">
+            <div class="form-check my-3 p-5 border" [ngClass]="{'red-border': item.isInvalid}">
+                <input class="form-check-input" type="radio" value="{{item.value}}" name="groupName" disabled={{item.isInvalid}}>
                 <ng-container *ngIf="!item.label">
                     <img src="{{item.piturePath}}" alt="" height="70px" width="140px"  title="{{item.tooltip}}">
                 </ng-container>
@@ -11,6 +11,9 @@
                         {{item.label}}
                 </label>
             </ng-container>
+            </div>
+            <div>
+                <i class="fa fa-times" aria-hidden="true"></i>
             </div>
         </div>
     </div>
