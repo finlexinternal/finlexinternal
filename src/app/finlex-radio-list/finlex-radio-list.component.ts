@@ -17,6 +17,7 @@ export class FinlexRadioListComponent implements OnInit {
       value: 2,
       label: 'Option 2',
       tooltip: 'Tooltip for Option 2',
+      selected: true,
     },
     {
       value: 3,
