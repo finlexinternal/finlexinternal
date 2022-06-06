@@ -15,6 +15,7 @@ import { FinlexRadioListComponent } from './finlex-radio-list/finlex-radio-list.
 import { FinlexDragdropComponent } from './finlex-dragdrop/finlex-dragdrop.component';
 import { FinlexProgressComponent } from './finlex-progress/finlex-progress.component';
 import { FinlexDndDirective } from './finlex-dnd.directive';
+import { FinlexCardComponent } from './finlex-card/finlex-card.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FinlexDndDirective } from './finlex-dnd.directive';
     FinlexDragdropComponent,
     FinlexProgressComponent,
     FinlexDndDirective,
+    FinlexCardComponent,
     
   ],
   imports: [

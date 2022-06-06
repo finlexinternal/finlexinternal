@@ -36,19 +36,12 @@ export class FinlexRadioListComponent implements OnInit {
     },
   ];
   @Input() public groupName: string = 'groupName';
-<<<<<<< HEAD
-  @Input() public customClass: any = {
-    'width': '100px',
-    'margin': '10px',
-  }
-=======
 
   @Input() resize: any = {
     width: '20px',
     height: '120px',
   };
   isInvalid: boolean = false;
->>>>>>> finlex-radio-list
   constructor() { }
 
   ngOnInit(): void {
