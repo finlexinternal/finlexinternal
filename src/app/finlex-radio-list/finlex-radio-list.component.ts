@@ -7,6 +7,7 @@ import { FinlexRadioListItems } from '../radio-list.interface';
   styleUrls: ['./finlex-radio-list.component.scss']
 })
 export class FinlexRadioListComponent implements OnInit {
+  
   @Input() public dataSource: FinlexRadioListItems[] = [
     {
       value: 1,
@@ -16,10 +17,12 @@ export class FinlexRadioListComponent implements OnInit {
       value: 2,
       label: 'Option 2',
       tooltip: 'Tooltip for Option 2',
+      selected: true,
     },
     {
       value: 3,
       label: 'Option 3',
+      isInvalid: true,
     },
     {
       value: 4,
@@ -33,13 +36,23 @@ export class FinlexRadioListComponent implements OnInit {
     },
   ];
   @Input() public groupName: string = 'groupName';
+<<<<<<< HEAD
   @Input() public customClass: any = {
     'width': '100px',
     'margin': '10px',
   }
+=======
+
+  @Input() resize: any = {
+    width: '20px',
+    height: '120px',
+  };
+  isInvalid: boolean = false;
+>>>>>>> finlex-radio-list
   constructor() { }
 
   ngOnInit(): void {
   }
+  
 
 }
