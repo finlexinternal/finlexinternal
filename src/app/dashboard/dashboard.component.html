@@ -1,4 +1,5 @@
 <finlex-breadcrumb [root]="parent" [child]="child"></finlex-breadcrumb>
+<hr />
 <finlex-table [tableAdapter]="tableAdapter" [tableFields]="tableFields" (onRowClickEvent)="RowClickEvent($event)"></finlex-table>
 <div class="container">
     <div class="row">
@@ -10,6 +11,7 @@
 </div>
 
 <finlex-radio-list></finlex-radio-list>
+<hr />
 <finlex-dragdrop></finlex-dragdrop>
 <hr />
 <finlex-card>
@@ -20,3 +22,7 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>    
     </div>
 </finlex-card>
+
+<hr />
+
+<finlex-icon [color]="color" [icon]="icon" [size]='size'></finlex-icon>

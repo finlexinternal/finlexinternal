@@ -8,6 +8,9 @@ import { TableAdapter, TableField } from '../table.interface';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  color = 'green';
+  size = 'fa-4x';
+  icon = 'facebook';
   public rowData: any;
   public parent: string = 'Test Route';
   public child: BreadcrumbLinkItem[] = [

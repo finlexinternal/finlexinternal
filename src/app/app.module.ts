@@ -16,6 +16,7 @@ import { FinlexDragdropComponent } from './finlex-dragdrop/finlex-dragdrop.compo
 import { FinlexProgressComponent } from './finlex-progress/finlex-progress.component';
 import { FinlexDndDirective } from './finlex-dnd.directive';
 import { FinlexCardComponent } from './finlex-card/finlex-card.component';
+import { FinlexIconComponent } from './finlex-icon/finlex-icon.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FinlexCardComponent } from './finlex-card/finlex-card.component';
     FinlexProgressComponent,
     FinlexDndDirective,
     FinlexCardComponent,
+    FinlexIconComponent,
     
   ],
   imports: [
